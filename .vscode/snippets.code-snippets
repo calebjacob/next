@@ -1,0 +1,46 @@
+{
+  "React Component": {
+    "scope": "typescriptreact",
+    "prefix": "react-c",
+    "description": "React functional component",
+    "body": [
+      "import type { FC } from 'react';",
+      "",
+      "interface Props {}",
+      "",
+      "const $1: FC<Props> = (props: Props) => {",
+      "  return (",
+      "    <>",
+      "      <p>Hello!</p>",
+      "    </>",
+      "  );",
+      "};",
+      "",
+      "export default $1;"
+    ]
+  },
+
+  "Next Page Component": {
+    "scope": "typescriptreact",
+    "prefix": "next-c",
+    "description": "Next functional page component",
+    "body": [
+      "import type { NextPage } from 'next';",
+      "import Head from 'next/head';",
+      "",
+      "const $1: NextPage = () => {",
+      "  return (",
+      "    <>",
+      "      <Head>",
+      "        <title></title>",
+      "        <meta name=\"description\" content=\"\" />",
+      "      </Head>",
+      "      <p>Hello!</p>",
+      "    </>",
+      "  );",
+      "};",
+      "",
+      "export default $1;"
+    ]
+  }
+}
