@@ -8,6 +8,7 @@ import { ThemeProvider } from 'styled-components';
 
 import TheFooter from '@/components/the-footer';
 import TheHeader from '@/components/the-header';
+import { TheWrapper, TheWrapperContent } from '@/components/the-wrapper';
 import { standardTheme } from '@/styles/themes';
 
 const App: FC<AppProps> = ({ Component, pageProps }) => {
@@ -20,13 +21,15 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
           <link rel="icon" href="/favicon.ico" />
         </Head>
 
-        <TheHeader />
+        <TheWrapper>
+          <TheHeader />
 
-        <main>
-          <Component {...pageProps} />
-        </main>
+          <TheWrapperContent>
+            <Component {...pageProps} />
+          </TheWrapperContent>
 
-        <TheFooter />
+          <TheFooter />
+        </TheWrapper>
       </ThemeProvider>
     </>
   );

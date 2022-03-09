@@ -1,25 +1,4 @@
 {
-  "React Component": {
-    "scope": "typescriptreact",
-    "prefix": "react-c",
-    "description": "React functional component",
-    "body": [
-      "import type { FC } from 'react';",
-      "",
-      "interface Props {}",
-      "",
-      "const $1: FC<Props> = (props: Props) => {",
-      "  return (",
-      "    <>",
-      "      <p>Hello!</p>",
-      "    </>",
-      "  );",
-      "};",
-      "",
-      "export default $1;"
-    ]
-  },
-
   "Next Page Component": {
     "scope": "typescriptreact",
     "prefix": "next-c",
@@ -42,5 +21,42 @@
       "",
       "export default $1;"
     ]
+  },
+
+  "React Component": {
+    "scope": "typescriptreact",
+    "prefix": "react-c",
+    "description": "React functional component",
+    "body": [
+      "import type { FC } from 'react';",
+      "",
+      "interface Props {}",
+      "",
+      "const $1: FC<Props> = (props: Props) => {",
+      "  return (",
+      "    <>",
+      "      <p>Hello!</p>",
+      "    </>",
+      "  );",
+      "};",
+      "",
+      "export default $1;"
+    ]
+  },
+
+  "Styled Components - Wild Card Import": {
+    "prefix": "sci",
+    "body": "import * as S from './styled';",
+    "description": "Use props.theme inside styled-component"
+  },
+  "Styled Components - Theme": {
+    "prefix": "sct",
+    "body": "${({ theme }) => theme.$1};",
+    "description": "Use props.theme inside styled-component"
+  },
+  "Styled Components - Props": {
+    "prefix": "scp",
+    "body": "${props => props.$1};",
+    "description": "Use props inside styled-component"
   }
 }

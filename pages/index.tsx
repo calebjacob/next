@@ -1,15 +1,15 @@
 import type { NextPage } from 'next';
-import styled from 'styled-components';
 
-const Paragraph = styled.p`
-  font-size: 50px;
-  color: ${({ theme }) => theme.colors.primary};
-`;
+import Section from '@/components/section';
+import { H1, P } from '@/components/text';
 
 const HomePage: NextPage = () => {
   return (
     <>
-      <Paragraph>My home page.</Paragraph>
+      <Section>
+        <H1>Hello there!</H1>
+        <P>This is some paragraph text.</P>
+      </Section>
     </>
   );
 };

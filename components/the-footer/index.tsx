@@ -1,11 +1,13 @@
 import type { FC } from 'react';
 
-const TheHeader: FC = () => {
+import * as S from './styled';
+
+const TheFooter: FC = () => {
   return (
-    <header>
-      <h1>My App</h1>
-    </header>
+    <S.Footer>
+      <p>Here is my footer.</p>
+    </S.Footer>
   );
 };
 
-export default TheHeader;
+export default TheFooter;
