@@ -49,14 +49,9 @@
     "body": "import * as S from './styled';",
     "description": "Use props.theme inside styled-component"
   },
-  "Styled Components - Theme": {
-    "prefix": "sct",
-    "body": "${({ theme }) => theme.$1};",
-    "description": "Use props.theme inside styled-component"
-  },
   "Styled Components - Props": {
     "prefix": "scp",
-    "body": "${props => props.$1};",
+    "body": "${p => p.$1};",
     "description": "Use props inside styled-component"
   }
 }

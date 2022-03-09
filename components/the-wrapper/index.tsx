@@ -11,4 +11,5 @@ export const TheWrapper = styled.div`
 export const TheWrapperContent = styled.main`
   flex: 1 0 auto;
   width: 100%;
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.2);
 `;

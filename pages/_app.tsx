@@ -1,5 +1,4 @@
 import '@/styles/reset.css';
-import '@/styles/globals.css';
 
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
@@ -9,6 +8,7 @@ import { ThemeProvider } from 'styled-components';
 import TheFooter from '@/components/the-footer';
 import TheHeader from '@/components/the-header';
 import { TheWrapper, TheWrapperContent } from '@/components/the-wrapper';
+import GlobalStyle from '@/styles/globals';
 import { standardTheme } from '@/styles/themes';
 
 const App: FC<AppProps> = ({ Component, pageProps }) => {
@@ -20,6 +20,8 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
           <meta name="description" content="My website description goes here." />
           <link rel="icon" href="/favicon.ico" />
         </Head>
+
+        <GlobalStyle />
 
         <TheWrapper>
           <TheHeader />

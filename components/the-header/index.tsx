@@ -5,7 +5,7 @@ import * as S from './styled';
 const TheHeader: FC = () => {
   return (
     <S.Header>
-      <p>Here is my header.</p>
+      <S.Logo>My App</S.Logo>
     </S.Header>
   );
 };
