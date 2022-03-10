@@ -1,11 +1,11 @@
-import type { FC, ReactNode } from 'react';
+import type { FC, HTMLAttributes, ReactNode } from 'react';
 
 import type { ThemeBreakPoints, ThemeSpacing } from '@/styles/themes';
 
 import * as S from './styled';
 import type { AlignContent, AlignItems, Direction, JustifyContent, Wrap } from './types';
 
-interface Props {
+interface Props extends HTMLAttributes<HTMLDivElement> {
   alignContent?: AlignContent;
   alignItems?: AlignItems;
   breakPoint?: ThemeBreakPoints;
@@ -24,7 +24,8 @@ const Flex: FC<Props> = ({
   direction = 'row',
   gap = 'standard',
   justifyContent = 'space-between',
-  wrap = 'nowrap'
+  wrap = 'nowrap',
+  ...props
 }: Props) => {
   return (
     <S.Flex
@@ -37,6 +38,7 @@ const Flex: FC<Props> = ({
         justifyContent,
         wrap
       }}
+      {...props}
     >
       {children}
     </S.Flex>

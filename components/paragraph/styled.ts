@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import type { ThemeColors } from '@/styles/themes';
 
-export const P = styled.p<{ $color: ThemeColors }>`
+export const Paragraph = styled.p<{ $color: ThemeColors }>`
   color: ${p => p.theme.colors[p.$color]};
   font-family: ${p => p.theme.fonts.primary};
   font-weight: 400;

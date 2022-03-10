@@ -36,5 +36,5 @@ export const H5 = styled(Text)`
 `;
 
 export const H6 = styled(Text)`
-  font-size: ${p => p.theme.fontSizes.h5};
+  font-size: ${p => p.theme.fontSizes.h6};
 `;

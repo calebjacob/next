@@ -34,7 +34,8 @@ export const standardTheme = {
     h2: '2.5rem',
     h3: '2rem',
     h4: '1.5rem',
-    h5: '1rem'
+    h5: '1rem',
+    h6: '0.8rem'
   },
 
   inputSizes: {

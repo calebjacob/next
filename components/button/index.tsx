@@ -17,17 +17,16 @@ const Button: FC<Props> = ({
   type = 'button',
   ...props
 }: Props) => {
-  const buttonTypes = {
+  const buttons = {
     primary: S.PrimaryButton,
     secondary: S.SecondaryButton
   };
-
-  const Tag = buttonTypes[appearance];
+  const StyledButton = buttons[appearance];
 
   return (
-    <Tag $size={size} type={type} {...props}>
+    <StyledButton $size={size} type={type} {...props}>
       {children}
-    </Tag>
+    </StyledButton>
   );
 };
 
