@@ -8,7 +8,7 @@ const Text = styled.p<{ $color: ThemeColors }>`
   font-weight: 300;
   font-size: ${p => p.theme.fontSizes.body};
   line-height: 1.5;
-  margin-bottom: ${p => p.theme.spacing};
+  margin-bottom: ${p => p.theme.spacing.standard};
 `;
 
 export const H1 = styled(Text)`

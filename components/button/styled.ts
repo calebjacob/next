@@ -5,6 +5,7 @@ import type { ThemeInputSizes } from '@/styles/themes';
 const Button = styled.button<{
   $size: ThemeInputSizes;
 }>`
+  border-radius: ${p => p.theme.borderRadius};
   display: inline-block;
   cursor: pointer;
   font-weight: 500;
@@ -12,8 +13,8 @@ const Button = styled.button<{
   font-size: ${p => (p.$size === 'small' ? p.theme.fontSizes.bodySmall : p.theme.fontSizes.body)};
   line-height: ${p => p.theme.inputSizes[p.$size]};
   height: ${p => p.theme.inputSizes[p.$size]};
-  padding: 0 ${p => (p.$size === 'large' ? p.theme.spacingDouble : p.theme.spacing)};
-  margin-bottom: ${p => p.theme.spacing};
+  padding: 0 ${p => (p.$size === 'large' ? p.theme.spacing.large : p.theme.spacing.standard)};
+  margin-bottom: ${p => p.theme.spacing.standard};
   transition: opacity ${p => p.theme.transitionSpeed};
 
   &:hover {

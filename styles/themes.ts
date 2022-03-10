@@ -2,8 +2,11 @@ export type Theme = typeof standardTheme;
 
 export type ThemeColors = keyof typeof standardTheme.colors;
 export type ThemeInputSizes = keyof typeof standardTheme.inputSizes;
+export type ThemeSpacing = keyof typeof standardTheme.spacing.standard;
 
 export const standardTheme = {
+  borderRadius: '5px',
+
   colors: {
     brandPrimary: '#2135da',
     surface1: '#ffffff',
@@ -36,9 +39,11 @@ export const standardTheme = {
 
   maxContainerWidth: '1200px',
 
-  spacing: '1rem',
-  spacingDouble: '2rem',
-  spacingHalf: '0.5rem',
+  spacing: {
+    small: '0.5rem',
+    standard: '1rem',
+    large: '2rem'
+  },
 
   transitionSpeed: '200ms'
 };

@@ -8,5 +8,5 @@ export const P = styled.p<{ $color: ThemeColors }>`
   font-weight: 400;
   font-size: ${p => p.theme.fontSizes.body};
   line-height: 1.5;
-  margin-bottom: ${p => p.theme.spacing};
+  margin-bottom: ${p => p.theme.spacing.standard};
 `;
