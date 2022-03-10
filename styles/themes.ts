@@ -1,11 +1,17 @@
 export type Theme = typeof standardTheme;
 
+export type ThemeBreakPoints = keyof typeof standardTheme.breakPoints;
 export type ThemeColors = keyof typeof standardTheme.colors;
 export type ThemeInputSizes = keyof typeof standardTheme.inputSizes;
-export type ThemeSpacing = keyof typeof standardTheme.spacing.standard;
+export type ThemeSpacing = keyof typeof standardTheme.spacing;
 
 export const standardTheme = {
   borderRadius: '5px',
+
+  breakPoints: {
+    phone: '500px',
+    tablet: '900px'
+  },
 
   colors: {
     brandPrimary: '#2135da',

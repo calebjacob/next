@@ -15,6 +15,7 @@ const Button = styled.button<{
   height: ${p => p.theme.inputSizes[p.$size]};
   padding: 0 ${p => (p.$size === 'large' ? p.theme.spacing.large : p.theme.spacing.standard)};
   margin-bottom: ${p => p.theme.spacing.standard};
+  flex-shrink: 0;
   transition: opacity ${p => p.theme.transitionSpeed};
 
   &:hover {

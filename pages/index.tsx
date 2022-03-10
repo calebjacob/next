@@ -1,6 +1,7 @@
 import type { NextPage } from 'next';
 
 import Button from '@/components/button';
+import Flex from '@/components/flex';
 import Heading from '@/components/heading';
 import Paragraph from '@/components/paragraph';
 import Section from '@/components/section';
@@ -13,11 +14,14 @@ const HomePage: NextPage = () => {
           Hello!
         </Heading>
         <Paragraph>This is some paragraph text.</Paragraph>
-        <Button size="large">Click Me</Button>
-        <Button appearance="secondary">Click Me</Button>
-        <Button appearance="secondary" size="small">
-          Click Me
-        </Button>
+
+        <Flex breakPoint="tablet">
+          <Button size="large">Click Me</Button>
+          <Button appearance="secondary">Click Me</Button>
+          <Button appearance="secondary" size="small">
+            Click Me
+          </Button>
+        </Flex>
       </Section>
 
       <Section>
