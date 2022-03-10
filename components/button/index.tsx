@@ -7,12 +7,14 @@ import * as S from './styled';
 interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
   appearance?: 'primary' | 'secondary';
   children: ReactNode;
+  href?: string;
   size?: ThemeInputSizes;
 }
 
 const Button: FC<Props> = ({
   appearance = 'primary',
   children,
+  href,
   size = 'standard',
   type = 'button',
   ...props
@@ -22,9 +24,10 @@ const Button: FC<Props> = ({
     secondary: S.SecondaryButton
   };
   const StyledButton = buttons[appearance];
+  const tag = href ? 'a' : 'button';
 
   return (
-    <StyledButton $size={size} type={type} {...props}>
+    <StyledButton as={tag} href={href} type={type} $size={size} {...props}>
       {children}
     </StyledButton>
   );

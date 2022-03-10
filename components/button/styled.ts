@@ -22,7 +22,8 @@ const Button = styled.button<{
     opacity: 0.9;
   }
 
-  &:active {
+  &:active,
+  &:focus {
     opacity: 0.8;
   }
 `;

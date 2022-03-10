@@ -14,7 +14,7 @@ interface Props extends HTMLAttributes<HTMLHeadingElement> {
 }
 
 const Heading: FC<Props> = ({ as, children, color = 'text1', level, ...props }: Props) => {
-  const asTag: As = as || `h${level}`;
+  const asHeadingTag: As = as || `h${level}`;
   const headings = {
     1: S.H1,
     2: S.H2,
@@ -26,7 +26,7 @@ const Heading: FC<Props> = ({ as, children, color = 'text1', level, ...props }: 
   const StyledHeading = headings[level];
 
   return (
-    <StyledHeading as={asTag} $color={color} {...props}>
+    <StyledHeading as={asHeadingTag} $color={color} {...props}>
       {children}
     </StyledHeading>
   );

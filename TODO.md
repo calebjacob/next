@@ -6,9 +6,9 @@
 [X] Make sure dynamic theme changes are supported (switching from dark to light mode)
 [X] Build out <Flex /> component to handle basic layouts
 [X] Refactor <Heading /> and <Button /> and make sure all components can be extended by respecting `className`
-[] Build out folder structure and basic components
+[X] Build out folder structure and basic components
+[] Test out react hook form for form / input flows (create form and input components)
 [] See how those styles play with headless components like Radix UI
-[] Test out react hook form for form / input flows
 [] Test out async API load data flow
 [] Test out session example log in / log out
 [] Test out React Query
