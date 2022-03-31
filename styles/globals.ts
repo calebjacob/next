@@ -1,19 +1,22 @@
-import { createGlobalStyle } from 'styled-components';
+import { globalCss } from './theme';
 
-const GlobalStyle = createGlobalStyle`
-  html,
-  body,
-  body > div {
-    height: 100%;
+const styles = globalCss({
+  html: {
+    fontSize: '100%',
+    height: '100%'
+  },
+
+  body: {
+    color: 'pink',
+    height: '100%',
+    lineHeight: 1.5,
+    background: '$surface2',
+    fontFamily: '$body'
+  },
+
+  'body > div': {
+    height: '100%'
   }
+});
 
-  html,
-  body {
-    font-size: 16px;
-    line-height: 1.5;
-    font-family: ${p => p.theme.fonts.primary};
-    background: ${p => p.theme.colors.surface2};
-  }
-`;
-
-export default GlobalStyle;
+export default styles;

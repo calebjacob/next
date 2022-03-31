@@ -1,4 +1,4 @@
-import type { FC, ReactNode } from 'react';
+import type { ReactNode } from 'react';
 import { FormProvider, useForm } from 'react-hook-form';
 
 interface Props {
@@ -6,7 +6,7 @@ interface Props {
   onSubmit(data: unknown): void;
 }
 
-const Form: FC<Props> = ({ children, onSubmit }: Props) => {
+export const Form = ({ children, onSubmit }: Props) => {
   const formMethods = useForm();
 
   return (
@@ -15,5 +15,3 @@ const Form: FC<Props> = ({ children, onSubmit }: Props) => {
     </FormProvider>
   );
 };
-
-export default Form;

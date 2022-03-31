@@ -1,39 +1,55 @@
-import styled from 'styled-components';
+import { styled } from '@/styles/theme';
 
-import type { ThemeInputSizes } from '@/styles/themes';
+export const Button = styled('button', {
+  borderRadius: '$standard',
+  display: 'inline-flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  cursor: 'pointer',
+  fontWeight: 500,
+  fontFamily: '$body',
+  paddingLeft: '$m',
+  paddingRight: '$m',
+  flexShrink: 0,
+  transition: 'opacity 200ms',
 
-const Button = styled.button<{
-  $size: ThemeInputSizes;
-}>`
-  border-radius: ${p => p.theme.borderRadius};
-  display: inline-block;
-  cursor: pointer;
-  font-weight: 500;
-  font-family: ${p => p.theme.fonts.primary};
-  font-size: ${p => (p.$size === 'small' ? p.theme.fontSizes.bodySmall : p.theme.fontSizes.body)};
-  line-height: ${p => p.theme.inputSizes[p.$size]};
-  height: ${p => p.theme.inputSizes[p.$size]};
-  padding: 0 ${p => (p.$size === 'large' ? p.theme.spacing.large : p.theme.spacing.standard)};
-  margin-bottom: ${p => p.theme.spacing.standard};
-  flex-shrink: 0;
-  transition: opacity ${p => p.theme.transitionSpeed};
+  '&:hover': {
+    opacity: 0.9
+  },
 
-  &:hover {
-    opacity: 0.9;
+  '&:active, &:focus': {
+    opacity: 0.8
+  },
+
+  variants: {
+    color: {
+      primary: {
+        background: '$brandPrimary',
+        color: '$surface1'
+      },
+      secondary: {
+        background: '$text2',
+        color: '$surface1'
+      }
+    },
+    size: {
+      small: {
+        fontSize: '$bodySmall',
+        height: '$inputSmall'
+      },
+      standard: {
+        fontSize: '$body',
+        height: '$inputStandard'
+      },
+      large: {
+        fontSize: '$h5',
+        height: '$inputLarge'
+      }
+    }
+  },
+
+  defaultVariants: {
+    color: 'primary',
+    size: 'standard'
   }
-
-  &:active,
-  &:focus {
-    opacity: 0.8;
-  }
-`;
-
-export const PrimaryButton = styled(Button)`
-  background: ${p => p.theme.colors.brandPrimary};
-  color: ${p => p.theme.colors.surface1};
-`;
-
-export const SecondaryButton = styled(Button)`
-  background: ${p => p.theme.colors.text2};
-  color: ${p => p.theme.colors.surface1};
-`;
+});

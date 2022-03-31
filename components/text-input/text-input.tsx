@@ -1,4 +1,3 @@
-import type { FC } from 'react';
 import { useFormContext } from 'react-hook-form';
 
 interface Props {
@@ -6,7 +5,7 @@ interface Props {
   name: string;
 }
 
-const TextInput: FC<Props> = ({ label, name }: Props) => {
+export const TextInput = ({ label, name }: Props) => {
   const { register } = useFormContext();
 
   return (
@@ -15,5 +14,3 @@ const TextInput: FC<Props> = ({ label, name }: Props) => {
     </>
   );
 };
-
-export default TextInput;

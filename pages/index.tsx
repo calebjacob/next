@@ -1,35 +1,33 @@
 import type { NextPage } from 'next';
 import Link from 'next/link';
 
-import Button from '@/components/button';
-import Flex from '@/components/flex';
-import Heading from '@/components/heading';
-import Paragraph from '@/components/paragraph';
-import Section from '@/components/section';
-import TextLink from '@/components/text-link';
+import { Button } from '@/components/button';
+import { Flex } from '@/components/flex';
+import { H1, H2, H3 } from '@/components/heading';
+import { P } from '@/components/paragraph';
+import { Section } from '@/components/section';
+import { TextLink } from '@/components/text-link';
 
 const HomePage: NextPage = () => {
   return (
     <>
-      <Section background="surface1" noBorder>
-        <Heading level="1" color="brandPrimary">
-          Hello!
-        </Heading>
+      <Section color="primary" noBorder>
+        <H1 color="brandPrimary">Hello!</H1>
 
-        <Paragraph>
+        <P>
           This is some paragraph text. Here is a{' '}
           <Link href="/other" passHref>
             <TextLink>link</TextLink>
           </Link>{' '}
           to click.
-        </Paragraph>
+        </P>
 
-        <Flex breakPoint="tablet">
+        <Flex stackMobile>
           <Link href="/other" passHref>
             <Button size="large">Click Me</Button>
           </Link>
           <Button
-            appearance="secondary"
+            color="secondary"
             onClick={() => {
               alert('Hello 1');
             }}
@@ -37,7 +35,7 @@ const HomePage: NextPage = () => {
             Click Me
           </Button>
           <Button
-            appearance="secondary"
+            color="secondary"
             size="small"
             onClick={() => {
               alert('Hello 2');
@@ -49,13 +47,13 @@ const HomePage: NextPage = () => {
       </Section>
 
       <Section>
-        <Heading level="2">Another Section</Heading>
-        <Paragraph>This is some other paragraph text.</Paragraph>
+        <H2>Another Section</H2>
+        <P>This is some other paragraph text.</P>
       </Section>
 
       <Section>
-        <Heading level="3">Another Section</Heading>
-        <Paragraph>This is some other paragraph text.</Paragraph>
+        <H3>Another Section</H3>
+        <P>This is some other paragraph text.</P>
       </Section>
     </>
   );

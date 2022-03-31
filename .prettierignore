@@ -1,4 +1,5 @@
 /node_modules
-/.next/
-/out/
+/.next
+/out
 /build
+package-lock.json

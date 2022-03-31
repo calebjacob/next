@@ -1,11 +1,11 @@
 import type { NextPage } from 'next';
 
-import Button from '@/components/button';
-import Form from '@/components/form';
-import Heading from '@/components/heading';
-import Paragraph from '@/components/paragraph';
-import Section from '@/components/section';
-import TextInput from '@/components/text-input';
+import { Button } from '@/components/button';
+import { Form } from '@/components/form';
+import { H1 } from '@/components/heading';
+import { P } from '@/components/paragraph';
+import { Section } from '@/components/section';
+import { TextInput } from '@/components/text-input';
 
 const OtherPage: NextPage = () => {
   function onSubmit(data: unknown) {
@@ -14,12 +14,9 @@ const OtherPage: NextPage = () => {
 
   return (
     <>
-      <Section background="surface1" noBorder>
-        <Heading level="1" color="brandPrimary">
-          Other Page
-        </Heading>
-
-        <Paragraph>This is some paragraph text.</Paragraph>
+      <Section color="primary" noBorder>
+        <H1 color="brandPrimary">Other Page</H1>
+        <P>This is some paragraph text.</P>
       </Section>
 
       <Section>

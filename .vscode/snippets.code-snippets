@@ -28,11 +28,9 @@
     "prefix": "react-c",
     "description": "React functional component",
     "body": [
-      "import type { FC } from 'react';",
-      "",
       "interface Props {}",
       "",
-      "const $1: FC<Props> = (props: Props) => {",
+      "const $1 = (props: Props) => {",
       "  return (",
       "    <>",
       "      <p>Hello!</p>",
@@ -44,14 +42,14 @@
     ]
   },
 
-  "Styled Components - Wild Card Import": {
-    "prefix": "sci",
-    "body": "import * as S from './styled';",
-    "description": "Use props.theme inside styled-component"
-  },
-  "Styled Components - Props": {
-    "prefix": "scp",
-    "body": "${p => p.$1};",
-    "description": "Use props inside styled-component"
+  "Styled Component": {
+    "scope": "typescriptreact,typescript",
+    "prefix": "styled-c",
+    "description": "Stitches styled component",
+    "body": [
+      "import { styled } from '@/styles/theme';",
+      "",
+      "export const $1 = styled('div', {$2});"
+    ]
   }
 }

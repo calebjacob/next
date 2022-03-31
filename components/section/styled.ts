@@ -1,20 +1,29 @@
-import styled from 'styled-components';
+import { styled } from '@/styles/theme';
 
-import type { ThemeColors } from '@/styles/themes';
+export const Section = styled('section', {
+  padding: '$l',
+  borderBottom: '1px solid',
+  borderColor: '$surface3',
 
-export const Section = styled.section<{ $background: ThemeColors; $noBorder: boolean }>`
-  padding: ${p => p.theme.spacing.large};
-  padding-bottom: ${p => p.theme.spacing.standard};
-  background: ${p => p.theme.colors[p.$background]};
-  border-bottom: 1px solid ${p => p.theme.colors.surface3};
-  border-bottom: ${p => (p.$noBorder ? 'none' : undefined)};
+  '&:last-child': {
+    borderBottom: 'none'
+  },
 
-  &:last-child {
-    border-bottom: none;
+  '@mobile': {
+    padding: '$m'
+  },
+
+  variants: {
+    color: {
+      primary: {
+        background: '$surface1'
+      }
+    },
+
+    noBorder: {
+      true: {
+        borderBottom: 'none'
+      }
+    }
   }
-
-  @media (max-width: ${p => p.theme.breakPoints.phone}) {
-    padding-left: ${p => p.theme.spacing.standard};
-    padding-right: ${p => p.theme.spacing.standard};
-  }
-`;
+});
