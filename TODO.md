@@ -3,7 +3,8 @@
 [X] Switch over to stitches
 [] Add husky lint staged
 [] Rethink color variable names
-[] https://www.joshwcomeau.com/react/file-structure/
+[] Improve button styles (support outline variant and better focus styles)
+[] Abstract transition 200ms via stitches utils
 [] Test out react hook form for form / input flows (create form, text input, checkbox, radio)
 [] Test out Formik vs React Hook Form
 [] See how those styles play with headless components like Radix UI
