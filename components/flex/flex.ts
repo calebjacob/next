@@ -58,8 +58,8 @@ export const Flex = styled('div', {
       }
     },
 
-    stackMobile: {
-      true: {
+    stack: {
+      mobile: {
         '@mobile': {
           flexDirection: 'column'
         }

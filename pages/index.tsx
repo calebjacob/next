@@ -22,7 +22,7 @@ const HomePage: NextPage = () => {
           to click.
         </P>
 
-        <Flex stackMobile>
+        <Flex stack="mobile">
           <Link href="/other" passHref>
             <Button size="large">Click Me</Button>
           </Link>
