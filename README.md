@@ -32,7 +32,7 @@ nvm use
 Now install all of the project's dependencies via NPM:
 
 ```
-npm ci
+npm install
 ```
 
 Finally, run the development server:
