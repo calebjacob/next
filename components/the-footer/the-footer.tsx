@@ -1,6 +1,6 @@
 import { Container } from '../container';
 import { P } from '../paragraph';
-import * as S from './styled';
+import * as S from './styles';
 
 export const TheFooter = () => {
   return (

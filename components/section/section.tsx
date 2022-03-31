@@ -3,7 +3,7 @@ import type { ReactNode } from 'react';
 
 import { Container } from '../container';
 import { Stack } from '../flex';
-import * as S from './styled';
+import * as S from './styles';
 
 interface Props extends ComponentProps<typeof S.Section> {
   children: ReactNode;

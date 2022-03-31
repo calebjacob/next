@@ -1,6 +1,6 @@
 import type { ComponentProps } from '@stitches/react';
 
-import * as S from './styled';
+import * as S from './styles';
 
 interface Props extends ComponentProps<typeof S.Button> {
   type?: 'button' | 'submit' | 'reset';
