@@ -12,7 +12,7 @@ const HomePage: NextPage = () => {
   return (
     <>
       <Section color="primary" noBorder>
-        <H1 color="brandPrimary">Hello!</H1>
+        <H1>Hello!</H1>
 
         <P>
           This is some paragraph text. Here is a{' '}

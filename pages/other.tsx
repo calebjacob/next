@@ -15,7 +15,7 @@ const OtherPage: NextPage = () => {
   return (
     <>
       <Section color="primary" noBorder>
-        <H1 color="brandPrimary">Other Page</H1>
+        <H1>Other Page</H1>
         <P>This is some paragraph text.</P>
       </Section>
 
