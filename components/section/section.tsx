@@ -1,13 +1,12 @@
-import type { ComponentProps } from '@stitches/react';
-import type { ReactNode } from 'react';
+import type { ComponentProps, ElementType, ReactNode } from 'react';
 
 import { Container } from '../container';
 import { Stack } from '../flex';
 import * as S from './styles';
 
-interface Props extends ComponentProps<typeof S.Section> {
-  children: ReactNode;
-}
+type Props = ComponentProps<typeof S.Section> & {
+  as?: ElementType;
+};
 
 export const Section = (props: Props) => {
   return (

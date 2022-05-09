@@ -1,10 +1,10 @@
-import type { ComponentProps } from '@stitches/react';
+import type { ComponentProps, ElementType } from 'react';
 
 import * as S from './styles';
 
-interface Props extends ComponentProps<typeof S.Button> {
-  type?: 'button' | 'submit' | 'reset';
-}
+type Props = ComponentProps<typeof S.Button> & {
+  as?: ElementType;
+};
 
 export const Button = ({ children, type = 'button', ...props }: Props) => {
   return (
