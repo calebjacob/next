@@ -1,4 +1,4 @@
-import type { ComponentProps, ElementType, ReactNode } from 'react';
+import type { ComponentProps, ElementType } from 'react';
 
 import { Container } from '../container';
 import { Stack } from '../flex';
